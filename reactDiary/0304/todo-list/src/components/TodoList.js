@@ -37,7 +37,7 @@ class TodoList extends React.Component {
                 </ul>
                 <div>
                     <span>{ this.state.count }</span>
-                    <button>添加</button>
+                    <button onClick={ this.handleAdd }>添加</button>
                 </div>
             </>
         )
@@ -62,6 +62,14 @@ class TodoList extends React.Component {
 
         this.setState({
             list
+        })
+    }
+
+    handleAdd = () =>{
+        this.setState((prevState)=>{//累加参数传函数
+            return {
+                count:prevState.count+1
+            }
         })
     }
 }
