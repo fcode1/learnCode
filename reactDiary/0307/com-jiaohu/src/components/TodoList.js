@@ -1,6 +1,6 @@
 import React from 'react';
 import TodoItem from './TodoItem'
-import { Consumer } from './context'
+
 class TodoList extends React.Component{
     render(){
         const { list ,fn} = this.props;
