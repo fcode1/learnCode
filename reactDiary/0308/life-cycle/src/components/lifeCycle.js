@@ -51,7 +51,7 @@ class LifeCycle extends React.Component{
 
 
     componentDidMount () {
-        //发送ajax请求最好在这里边
+        //发送ajax请求最好在这里边 
         console.log('4.didMount');
     }
 }

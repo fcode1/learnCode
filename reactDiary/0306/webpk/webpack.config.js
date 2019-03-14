@@ -19,7 +19,8 @@ module.exports = {
     //服务器开启的默认路径,端口号
     devServer:{
         contentBase:'dist',
-        port:9999
+        port:9999,
+        // hot:true//可在此开启热更新
     },
     // 应用 loader
     module:{
@@ -84,7 +85,8 @@ module.exports = {
         //单独抽离出css文件
         new MiniCss({
             filename:'[name]_[contenthash:8].css'//定义输出的名字
-        })
+        }),
+        // webpack.HotModuleReplacementPlugin()// 自己配置热更新时需要引入此插件，自带的插件
     ]
     
 }

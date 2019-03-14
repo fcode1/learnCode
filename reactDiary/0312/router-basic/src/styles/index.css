@@ -1,0 +1,19 @@
+@import './reset.css';
+
+body {
+  background-color: #f4f5f5;
+}
+
+.content {
+  margin: 10px 70px;
+}
+
+a {
+  color: #71777c;
+  margin: 0 20px;
+}
+
+
+a.active {
+  color: #007fff;
+}
