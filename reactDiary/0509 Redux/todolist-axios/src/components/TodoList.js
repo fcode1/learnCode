@@ -13,11 +13,14 @@ axios.interceptors.response.use(res =>{
 })
 
 class TodoList extends Component {
-
+  
   componentDidMount () {
-    axios.get('./list.json').then(res =>{
-      this.props.getInitList(res);
-    })
+
+    this.props.getInitList();
+
+    // axios.get('./list.json').then(res =>{
+    //   this.props.getInitList(res);
+    // })
   }
 
   render () {
