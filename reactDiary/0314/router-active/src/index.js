@@ -13,7 +13,11 @@ import Activities from './pages/activities/Activities';
 import Topics from './pages/topics/Topics';
 import Login from './pages/login/Login';
 import App from './App';
+import Article from './pages/article/Article'
 import './styles/index.css'
+import PrivateRoute from './components/PrivateRoute'
+import NoMatch from './pages/NoMatch/NoMatch'
+
 
 ReactDOM.render(
   <Router>
@@ -22,9 +26,12 @@ ReactDOM.render(
         <Switch>
             <Route path = '/' exact component = { Home }></Route>
             <Route path = '/activities' component = {Activities}></Route>
-            <Route path = '/topics' component = {Topics}></Route>
+            <PrivateRoute path = '/topics' component = {Topics}></PrivateRoute>
+            {/* <Route path = '/topics' component = {Topics}></Route> */}
             <Route path = '/login' component = {Login}></Route>
-            <Redirect to='/'></Redirect>
+            <Route path = '/article/:id' component = { Article }></Route>
+            <Route path = '/NoMatch' component = {NoMatch}></Route>
+            <Redirect to='/NoMatch'></Redirect>
           </Switch>
       </App>
       
